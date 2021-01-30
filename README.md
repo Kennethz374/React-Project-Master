@@ -1,4 +1,4 @@
-#### Tutorial Video
+<!-- #### Tutorial Video
 
 (React Tutorial)[https://youtu.be/iZhV0bILFb0]
 
@@ -55,4 +55,4 @@
 20. Dark Mode
 21. Movie DB
 22. Hacker News
-23. Quiz
+23. Quiz -->
