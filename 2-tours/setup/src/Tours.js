@@ -1,4 +1,4 @@
-import React from "./node_modules/react";
+import React from "react";
 import Tour from "./Tour";
 const Tours = () => {
   return <h2>tours component</h2>;
