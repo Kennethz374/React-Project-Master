@@ -57,7 +57,7 @@ export default function App() {
           <p className="job-date">{dates}</p>
           {duties.map((duty, index) => {
             return (
-              <div className="job-date">
+              <div key={index} className="job-desc">
                 <FaAngleDoubleRight className="job-icon"></FaAngleDoubleRight>
                 <p>{duty}</p>
               </div>
