@@ -1,8 +1,20 @@
-import React, { useState } from 'react';
-import data from './data';
-import SingleQuestion from './Question';
+import React, { useState } from "react";
+import data from "./data";
+import SingleQuestion from "./Question";
 function App() {
-  return <h2>accordion project setup</h2>;
+  const [questions, setQuestions] = useState(data);
+  return (
+    <main>
+      {questions.map(question => {
+        return (
+          <p>
+            {question.title}
+            {question.info}
+          </p>
+        );
+      })}
+    </main>
+  );
 }
 
 export default App;
