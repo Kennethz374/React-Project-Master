@@ -6,6 +6,8 @@ function App() {
 
   const handleSubmit = e => {
     e.preventDefault();
+    setCount(e.target.value);
+    setText(...text, data);
   };
 
   return (
@@ -21,10 +23,10 @@ function App() {
           onChange={e => setCount(e.target.value)}
         />
         <button type="submit" className="btn">
-          {" "}
           generate
         </button>
       </form>
+      <article className="lorem-text">{text}</article>
     </section>
   );
 }
