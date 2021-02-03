@@ -8,9 +8,17 @@ function App() {
   const [error, setError] = useState(false);
   const [list, setList] = useState([]);
 
+  //make sure value is color code or not first,otherwise spit back error
   const handleSubmit = e => {
     e.preventDefault();
-    console.log("hello");
+    try {
+      let colors = new Values(color).all(10);
+      console.log(colors);
+      setList(colors);
+    } catch (error) {
+      setError(true);
+      console.log(error);
+    }
   };
 
   return (
@@ -25,6 +33,7 @@ function App() {
               setColor(e.target.value);
             }}
             placeholder="#f15025"
+            className={`${error ? "error" : null}`}
           />
           <button className="btn" type="submit">
             submit
@@ -33,7 +42,7 @@ function App() {
       </section>
 
       <section className="color">
-        <h4>list color goes here</h4>
+        <SingleColor list={list} />
       </section>
     </>
   );
