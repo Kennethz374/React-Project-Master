@@ -7,7 +7,14 @@ function App() {
   const handleSubmit = e => {
     e.preventDefault();
     setCount(e.target.value);
-    setText(...text, data);
+    let amount = parseInt(count); // count is a string not number need to be parse
+    if (count <= 0) {
+      amount = 1;
+    }
+    if (count > 8) {
+      amount = 8;
+    }
+    setText(data.slice(0, amount)); //end value not included
   };
 
   return (
@@ -26,7 +33,11 @@ function App() {
           generate
         </button>
       </form>
-      <article className="lorem-text">{text}</article>
+      <article className="lorem-text">
+        {text.map((item, index) => {
+          return <p key={index}>{item}</p>;
+        })}
+      </article>
     </section>
   );
 }
