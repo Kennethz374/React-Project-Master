@@ -15,6 +15,7 @@ function App() {
       amount = 8;
     }
     setText(data.slice(0, amount)); //end value not included
+    setCount("");
   };
 
   return (
