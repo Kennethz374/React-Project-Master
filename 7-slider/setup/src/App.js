@@ -40,13 +40,13 @@ function App() {
           );
         })}
         {index !== 0 && (
-          <button className="prev">
-            <FiChevronLeft onClick={() => setIndex(index - 1)} />
+          <button className="prev" onClick={() => setIndex(index - 1)}>
+            <FiChevronLeft />
           </button>
         )}
         {index !== people.length - 1 && (
-          <button className="next">
-            <FiChevronRight onClick={() => setIndex(index + 1)} />
+          <button className="next" onClick={() => setIndex(index + 1)}>
+            <FiChevronRight />
           </button>
         )}
       </div>
