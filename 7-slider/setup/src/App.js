@@ -13,6 +13,7 @@ function App() {
     }
     if (index > lastIndex) {
       setIndex(0);
+      git;
     }
   }, [index, people]);
 
