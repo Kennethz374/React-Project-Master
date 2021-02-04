@@ -59,3 +59,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
+// check links container height depends on links height
+//use linksRef to target dom and get the height of the node,
+//set the height on link container as the same height by targeting containerRef
