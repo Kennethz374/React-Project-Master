@@ -13,12 +13,12 @@ const initialState = {
 };
 
 const AppProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(initialState);
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
     <AppContext.Provider
       value={{
-        cart
+        ...state
       }}
     >
       {children}
