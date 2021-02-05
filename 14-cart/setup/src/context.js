@@ -5,27 +5,20 @@ import reducer from "./reducer";
 // I SWITCHED TO PERMANENT DOMAIN
 const url = "https://course-api.com/react-useReducer-cart-project";
 const AppContext = React.createContext();
-
 const initialState = {
   loading: false,
-  cart: cartItems,
+  amount: 0,
   total: 0,
-  amount: 0
+  cart: cartItems
 };
 
 const AppProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(reducer, initialState);
-
-  const clearCart = () => {
-    dispatch({ type: "CLEAR_CART" });
-  };
-  const removeItem = () => {};
+  const [state, dispatch] = useReducer(initialState);
 
   return (
     <AppContext.Provider
       value={{
-        ...state,
-        clearCart
+        cart
       }}
     >
       {children}
