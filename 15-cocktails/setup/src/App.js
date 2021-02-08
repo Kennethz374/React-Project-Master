@@ -14,7 +14,9 @@ function App() {
       <Switch>
         <Home exact path="/" />
         <About exact path="/about" />
-        <SingleCocktail path="/cocktail/:id" />
+        <Route path="/cocktail/:id">
+          <SingleCocktail />
+        </Route>
         <Error path="*" />
       </Switch>
     </Router>

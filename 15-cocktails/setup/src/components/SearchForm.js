@@ -8,6 +8,7 @@ const SearchForm = () => {
   useEffect(() => {
     searchValue.current.focus();
   }, []);
+
   const searchCocktail = () => {
     setSearchTerm(searchValue.current.value);
   };
